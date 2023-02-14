@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Monthly Expenses</title>
+
+  <!-- tailwind cdn link -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+
+</head>
+<body class="bg-gray-200 " id="documentBody" onload="loaded()">
+  
+  <main class="w-full h-screen flex flex-col items-center justify-evenly relative">
+    <label for="sign-up" class="absolute right-20 top-5" id="log-in-btn"><a href="index.html" class="bg-amber-400 rounded-md px-4 font-semibold text-white py-2">Log Out</a></label>
+    <h1 class="font-bold text-3xl" id="title">Track Your Monthly Income & Expenses</h1>
+    <section class="grid grid-cols-2 gap-4" >
+      <div>  
+          <div class="container grid grid-cols-3 mx-auto max-w-[1250px] gap-2 text-white">
+            <div class=" rounded-xl p-4 flex flex-col gap-2 bg-amber-400">
+              <h3 class="font-bold text-xl">Bank Al-Rajhi</h3>
+              <h3 class="font-bold text-5xl">$<span id="alrajhi-amount">00.00</span></h3>
+            </div>
+          
+            <div class=" rounded-xl p-4 flex flex-col gap-2 bg-sky-400">
+              <h3 class="font-bold text-xl">Monthly Income</h3>
+              <h3 class="font-bold text-5xl">$<span id="monthly-income">00.00</span></h3>
+            </div>
+
+            <div class=" rounded-xl p-4 flex flex-col gap-2 bg-red-400">
+              <h3 class="font-bold text-xl">Bank StcPay</h3>
+              <h3 class="font-bold text-5xl">$<span id="stcpay-amount">00.00</span></h3>
+            </div>
+          
+            <div class=" rounded-xl p-4 flex flex-col gap-2 bg-lime-400">
+              <h3 class="font-bold text-xl">Withdrawal / Cash</h3>
+              <h3 class="font-bold text-5xl">$<span id="withdrawal-cash">00.00</span></h3>
+            </div>
+          
+            <div class=" rounded-xl p-4 flex flex-col gap-2 bg-emerald-400">
+              <h3 class="font-bold text-xl">Monthly Expenses</h3>
+              <h3 class="font-bold text-5xl">$<span id="monthly-expenses">00.00</span></h3>
+            </div>
+          
+            <div class=" rounded-xl p-4 flex flex-col gap-2 bg-yellow-400">
+              <h3 class="font-bold text-xl">Deposit</h3>
+              <h3 class="font-bold text-5xl">$<span  id="deposit">00.00</span></h3>
+            </div>
+          </div>
+      </div>
+      
+      <div class="flex flex-col justify-center items-center bg-gray-200">
+        <div class="grid grid-cols-4 gap-2">
+          <div>
+            <label for="stcpay"><input type="checkbox"  id="stcpay" value="stcpay"> StcPay</label>
+          </div>
+
+          <div>
+            <label for="alrajhi"><input type="checkbox"  id="alrajhi" value="alrajhi"> Al Rajhi</label>
+          </div>
+
+          <div>
+            <label for="deposit-radio"><input type="checkbox"  id="deposit-radio"> Deposit</label>
+          </div>
+
+          <div>
+            <label for="income-radio"><input type="checkbox"  id="income-radio"> Income</label>
+          </div>
+
+          <div>
+            <label for="withdrawal-radio"><input type="checkbox"  id="withdrawal-radio"> Withdrawal</label>
+          </div>
+
+          <div>
+            <label for="expenses-radio"><input type="checkbox" id="expenses-radio"> Expenses</label>
+          </div>
+          <div>
+            <label for="transfer-radio"><input type="checkbox" id="transfer-radio"> Transfer To Stc Pay</label>
+          </div>
+        </div>
+        
+        <form class="w-full flex gap-4 mt-10">
+          <input type="text" class="h-10 flex-[3] rounded-md" id="input-field">
+          <button type="button" id="calculate-btn" class="px-4 py-2 bg-red-600 text-white font-semibold rounded-md flex-[1]">Calculate</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+
+<script src="javascripts/utilities.js"></script>
+<script src="javascripts/script.js"></script>
+</body>
+</html>

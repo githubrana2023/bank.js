@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Log In Page</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+<body>
+  <main class="flex flex-col items-center justify-center w-full h-screen bg-gray-200">
+    <h1 class="font-bold text-sky-500 text-4xl mb-12">Log In Into Your account </h1>
+    <form class="grid grid-cols-1 gap-4">
+      <input type="email" id="email" placeholder="Email" class="h-9 pl-3 rounded-md" required>
+      <input type="password" id="password" placeholder="Password" class="h-9 pl-3 rounded-md" required>
+      <button type="submit"class="px-5 py-3 bg-sky-600 text-white font-semibold rounded-lg" id="log-in-btn">Log In</button>
+    </form>
+    <label for="sign-up" class="mt-5" id="log-in-btn">Don't have an account? <a href="sign-up.html" class="bg-amber-400 rounded-md px-4 font-semibold text-white py-2">Sign-up</a></label>
+  </main>
+
+  
+    <script src="javascripts/utilities.js"></script>
+    <script src="javascripts/login.js"></script>
+</body>
+</html>
